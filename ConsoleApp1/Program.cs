@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace C_Sharp
 {
-    public class Sample
+    public class MAIN_CLASS
     {
         static void Main()
         {
@@ -14,7 +14,7 @@ namespace C_Sharp
             InventoryItems items = new InventoryItems();
             do
             {
-                Console.WriteLine("Welcome to My Shop\n1.Add Product\n2.Delete Product using Product Name\n3.Update Product Using Product Name\n4.View All Products\n5.Exit\n\nEnter your option:");
+                Console.WriteLine("\nWelcome to My Shop\nMaster Inventory\n1.Add Product\n2.Delete Product using Product Name\n3.Update Product Using Product Name\n4.View All Products\n5.View Perishable Products\n6.View Non Perishable Products\n7.Exit\n\nEnter your option:");
                 int opt = int.Parse(Console.ReadLine());
                 if (opt == 1)
                 {
@@ -43,9 +43,20 @@ namespace C_Sharp
                 }
                 else if (opt == 4)
                 {
-                    items.viewProducts();
+                    items.GetProductDetails();
                 }
                 else if (opt == 5)
+                {
+                    items.classifyProducts();
+                    items.ViewPerishableItems();
+                   
+                }
+                else if (opt == 6)
+                {
+                    items.classifyProducts();
+                    items.ViewNonPerishableItems();
+                }
+                else if (opt == 7)
                 {
                     Console.WriteLine("Thanks for Booking!");
                     break;
@@ -56,6 +67,6 @@ namespace C_Sharp
                     break;
                 }
             } while (true);
-        } 
+        }
     }
 }
