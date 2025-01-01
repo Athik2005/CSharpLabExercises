@@ -144,9 +144,9 @@ namespace C_Sharp
             if (firstlist.Count > 0)
             {
                 Console.WriteLine("\nList of Products!\n");
-                for(int i = 0; i < firstlist.Count; i++)
+                for (int i = 0; i < firstlist.Count; i++)
                 {
-                    Console.WriteLine(product.getName());
+                    Console.WriteLine(firstlist[i].getName());
                 }
             }
             else
