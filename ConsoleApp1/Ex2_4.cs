@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Emit;
@@ -146,7 +146,7 @@ namespace C_Sharp
                 Console.WriteLine("\nList of Products!\n");
                 for(int i = 0; i < firstlist.Count; i++)
                 {
-                    Console.WriteLine(firstlist[i].getName());
+                    Console.WriteLine(product.getName());
                 }
             }
             else
